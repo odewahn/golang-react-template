@@ -5,9 +5,9 @@
   "description": "Startup template for golang apps with React frontend",
   "main": "",
   "scripts": {
-    "start": "npm run bundle & npm run serve",
-    "bundle": "watchify -o backend/public/bundle.js -v -d frontend/main.js",
-    "serve": "cd backend; gin"
+    "start": "npm run frontend & npm run backend",
+    "frontend": "watchify -o backend/public/bundle.js -v -d frontend/main.js",
+    "backend": "cd backend; gin"
   },
   "dependencies": {
     "browserify": "^12.0.1",
