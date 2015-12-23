@@ -1,0 +1,25 @@
+{
+  "name": "launchbot-client",
+  "author": "Andrew Odewahn",
+  "version": "0.1.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run bundle & npm run serve",
+    "bundle": "watchify -o backend/public/bundle.js -v -d frontend/main.js",
+    "serve": "cd backend; gin"
+  },
+  "dependencies": {
+    "browserify": "^12.0.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-router": "^0.13",
+    "reactify": "^1.1.1",
+    "watchify": "^3.6.1"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+node_modules
+.DS_Store
+backend/gin-bin
+backend/public/bundle.js
