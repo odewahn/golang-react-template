@@ -21,9 +21,14 @@ npm install
 npm run start
 ```
 
-This will start a dev server with live reload so that you can edit your go code in the `backend` and your React code in `frontend`.  `gin` handles reload for Golang and `watchify` handles it for React.
-
 View the app at `http://localhost:3000`.
 
+This will start a dev server with live reload so that you can edit your go code in the `backend` and your React code in `frontend`.  `gin` handles reload for Golang and `watchify` handles it for React.  This is all handled using [npm as a build tool](http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/):
 
-You should then put your new components in `frontend\components` and your golang stuff in `backend`.
+```
+"scripts": {
+  "start": "npm run frontend & npm run backend",
+  "frontend": "watchify -o backend/public/bundle.js -v -d frontend/main.js",
+  "backend": "cd backend; gin"
+},
+```
