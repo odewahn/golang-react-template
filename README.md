@@ -12,7 +12,7 @@ To use it, you'll need:
 
 * `npm` for package management
 * A Golang dev environment
-* [gin](https://github.com/codegangsta/negroni)
+* [gin](https://github.com/codegangsta/gin)
 
 First, clone it down to your machine (duh!) and `cd` into your new directory.  Then:
 
