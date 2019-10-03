@@ -7,12 +7,12 @@
   "scripts": {
     "start": "npm run frontend & npm run backend",
     "frontend": "watchify -o backend/public/bundle.js -v -d frontend/main.js",
-    "backend": "cd backend; gin"
+    "backend": "cd backend; go run main.go"
   },
   "dependencies": {
-    "browserify": "^12.0.1",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
+    "browserify": "^16.5.0",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
     "reactify": "^1.1.1",
     "watchify": "^3.6.1"
   },
